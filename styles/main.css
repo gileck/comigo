@@ -1,0 +1,50 @@
+@media (max-width: 700px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #636363
+
+}
+.main-nav a {
+  color: rgb(61, 61, 61);
+}
+
+.main-nav a:hover {
+  color:red;
+}
+
+ul {
+  list-style-type:none
+}
+
+.top-footer {
+  background-color: #3D3D3D;
+}
+
+.bottom-footer a {
+  color: #636363 ;
+}
+
+.bottom-footer a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.bottom-footer {
+  background-color: #151515;
+  color: #636363;
+  padding: 1em 0 .5em;
+  font-size: .58em;
+}
+
+.main-button-nav {
+  color: #fff
+}
+
+#7a7a7a
+
+
+
