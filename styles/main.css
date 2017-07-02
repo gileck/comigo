@@ -4,21 +4,78 @@
   }
 }
 
+body {
+  font-family: ProximaNova,Texta,Tahoma,sans-serif;
+  font-size: 14px;
+  font-weight:300;
+  margin:0;
+}
+
+header {
+  height: 66px;
+
+}
+
+ul {
+  list-style-type:none
+}
+
 a {
   text-decoration: none;
   color: #636363
+}
+
+.section-header {
+  color: white;
+  display: block;
+  position: relative;
+  font-size: 3.6em;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.first-section {
+  background-image: url("../assets/other/home-featured-bg.png");
+  height:700px;
+  background-size: cover;                      /* <------ */
 
 }
+
+.first-section-wrapper {
+  background-image: url("../assets/other/home-brain-image-new-1920x816.png");
+  height:100%;
+  background-size: cover;                      /* <------ */
+}
+
+.header-logo {
+  float: left;
+  padding-top:20px;
+  padding-left: 30px;
+}
+
+.nav-ul {
+  display: flex;
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+.nav-ul li {
+  padding:15px;
+  font-size: 18px;
+  font-weight:200;
+}
+
 .main-nav a {
   color: rgb(61, 61, 61);
 }
 
 .main-nav a:hover {
-  color:red;
+  color: red;
 }
 
-ul {
-  list-style-type:none
+.main-nav a:focus {
+  color: red;
 }
 
 .top-footer {
@@ -33,18 +90,48 @@ ul {
   color: #fff;
   border-color: #fff;
 }
+
 .bottom-footer {
   background-color: #151515;
   color: #636363;
   padding: 1em 0 .5em;
-  font-size: .58em;
 }
 
 .main-button-nav {
   color: #fff
 }
 
-#7a7a7a
+.btn {
+  display: inline-block;
+  position: relative;
+  line-height: 1em;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  padding: 1.2em 2em;
+  border-radius: 1.7em;
+  margin: 2em auto;
+  text-transform: uppercase;
+  transition: all 150ms ease-in-out;
+  box-shadow: 0 0 0 rgba(0,0,0,.15);
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.15);
+}
+
+.rd-btn {
+   background-color: #f14848;
+   border: 1px solid #f14848;
+   color: #fff;
+ }
+
+.white-btn {
+  background-color: white;
+  border: 1px solid white;
+  color: rgb(241, 72, 72);
+}
 
 
 
