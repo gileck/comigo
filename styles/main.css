@@ -26,11 +26,23 @@ a {
 }
 
 .solution-nav {
-  visibility: hidden;
+  display: none;
 }
 
-.solution-nav-link:hover + .solution-nav  {
-    visibility: visible;
+.solution-nav-link:hover > .solution-nav  {
+  background-color: white;
+  position: absolute;
+  width:100%;
+  display: flex;
+  float: left;
+  left: 0;
+  margin-top: 23px;
+}
+
+.solution-nav-link:hover > .solution-nav > li {
+  padding: 70px;
+  font-size: 55px;
+  width: 33%;
 }
 
 .section-header {
