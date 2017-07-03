@@ -25,13 +25,41 @@ a {
   color: #636363
 }
 
+.solution-nav {
+  visibility: hidden;
+}
+
+.solution-nav-link:hover + .solution-nav  {
+    visibility: visible;
+}
+
 .section-header {
   color: white;
   font-size: 85px;
   font-weight: 400;
   margin: 0;
   letter-spacing: 1px;
+}
 
+.second-section-header {
+  font-size: 85px;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 1px;
+
+}
+
+.second-wrapper {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.second-wrapper p{
+  font-size: 25px;
+  color: #8e8e8e;
+  font-weight: 100;
 }
 
 .header-wrapper {
@@ -52,6 +80,10 @@ a {
   background-image: url("../assets/other/home-brain-image-new-1920x816.png");
   height:100%;
   background-size: cover;                      /* <------ */
+}
+
+.second-section {
+  height:300px;
 }
 
 .header-logo {
@@ -77,12 +109,10 @@ a {
   color: rgb(61, 61, 61);
 }
 
+.main-nav a:focus,
 .main-nav a:hover {
   color: red;
-}
-
-.main-nav a:focus {
-  color: red;
+  outline: 0;
 }
 
 .top-footer {
