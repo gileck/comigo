@@ -9,10 +9,16 @@ body {
   font-size: 14px;
   font-weight:300;
   margin:0;
+  overflow-x: hidden;
 }
 
 header {
   height: 66px;
+  position: fixed;
+  background: white;
+  width: 100%;
+  opacity: 0.985;
+  box-shadow: 0px 2px 4px 0px #dcdcdc;
 
 }
 
@@ -25,25 +31,113 @@ a {
   color: #636363
 }
 
+.main-nav {
+  float: right;
+}
+
 .solution-nav {
   display: none;
 }
-
-.solution-nav-link:hover > .solution-nav  {
+.ii-nav:hover,
+.solution-nav:hover,
+.solution-nav-link:hover > .solution-nav,
+.ii-nav-link:hover > .ii-nav,
+.ei-cloud-li:hover > .ei-cloud-ul,
+.ei-middleware-li:hover > .ei-middleware-ul
+{
   background-color: white;
   position: absolute;
   width:100%;
   display: flex;
   float: left;
   left: 0;
-  margin-top: 23px;
+  padding-left: 0;
+  box-shadow: 0px 2px 4px 0px #dcdcdc;
+  /*height: auto;*/
+  /*max-height: 2000px;*/
+  /*transition: height 3s;*/
 }
 
-.solution-nav-link:hover > .solution-nav > li {
-  padding: 70px;
-  font-size: 55px;
-  width: 33%;
+.solution-nav:hover,
+.ii-nav-link:hover > .ii-nav,
+.solution-nav-link:hover > .solution-nav {
+  padding-top: 23px;
 }
+
+.ei-cloud-li:hover > .ei-cloud-ul,
+.ei-middleware-li:hover > .ei-middleware-ul
+{
+  /*margin-top: 70px;*/
+}
+
+.solution-nav:hover > li > a,
+.solution-nav-link:hover > .solution-nav > li > a,
+.ei-cloud-li:hover > .ei-cloud-ul > li > a,
+.ei-middleware-li:hover > .ei-middleware-ul > li > a,
+.ii-nav-link:hover > .ii-nav > li > a
+{
+  padding-bottom: 75px;
+  padding-top: 75px;
+  font-size: 55px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.solution-nav:hover > li,
+.ii-nav-link:hover > .ii-nav > li,
+.solution-nav-link:hover > .solution-nav > li {
+  flex: 1;
+}
+
+.ei-middleware-li:hover > .ei-middleware-ul > li,
+.ei-cloud-li:hover > .ei-cloud-ul > li
+{
+  width: 50%;
+}
+
+.solution-nav-link:hover > .solution-nav > li > a,
+.ii-nav-link:hover > .ii-nav > li > a
+{
+  text-align: center;
+
+}
+
+.ei-cloud-li:hover > .ei-cloud-ul > li > a:hover,
+.solution-nav-link:hover > .solution-nav > li > a:hover,
+.ei-middleware-li:hover > .ei-middleware-ul > li > a:hover,
+.ii-nav-link:hover > .ii-nav > li > a:hover
+{
+  background: #ff5f5f;
+  transition: 0.5s;
+}
+
+.ei-cloud-li:hover > .ei-cloud-ul > li > a:hover,
+.solution-nav-link > .solution-nav > li > a:hover,
+.ei-middleware-li:hover > .ei-middleware-ul > li > a:hover,
+.ii-nav-link:hover > .ii-nav > li > a:hover
+{
+  color: white;
+  transition: 0.5s;
+}
+
+.ei-cloud-ul {
+  display: none;
+}
+
+.ei-middleware-ul {
+  display: none;
+}
+
+.ii-nav {
+  display: none;
+}
+
+.smaller-nav-text {
+  font-size: 48px;
+}
+
+
 
 .section-header {
   color: white;
@@ -54,11 +148,15 @@ a {
 }
 
 .second-section-header {
-  font-size: 85px;
+  font-size: 70px;
   font-weight: 400;
   margin: 0;
   letter-spacing: 1px;
 
+}
+
+.second-section {
+  margin-bottom: 54px;
 }
 
 .second-wrapper {
@@ -85,7 +183,7 @@ a {
   background-image: url("../assets/other/home-featured-bg.png");
   height:700px;
   background-size: cover;                      /* <------ */
-
+  padding-top: 30px;
 }
 
 .first-section-wrapper {
@@ -94,13 +192,9 @@ a {
   background-size: cover;                      /* <------ */
 }
 
-.second-section {
-  height:300px;
-}
-
 .header-logo {
   float: left;
-  padding-top:20px;
+  padding-top:18px;
   padding-left: 30px;
 }
 
@@ -111,7 +205,7 @@ a {
   margin-right: 20px;
 }
 
-.nav-ul li {
+.nav-ul > li {
   padding:15px;
   font-size: 18px;
   font-weight:200;
@@ -122,9 +216,14 @@ a {
 }
 
 .main-nav a:focus,
-.main-nav a:hover {
+.main-nav a:hover,
+.top-footer a:hover{
   color: red;
   outline: 0;
+}
+
+.main-button-nav:hover {
+  color: white !important;
 }
 
 .top-footer {
@@ -179,5 +278,96 @@ a {
   color: rgb(241, 72, 72);
 }
 
+.third-section {
+  height: 672px;
+  overflow: hidden;
+  background-color: lightgray;
+}
+
+.left-box {
+  width: 44.5%;
+  padding: 46px;
+  float:left;
+  background-image: url('../assets/other/home-tv-service-bg1.png');
+}
 
 
+.left-box-wrapper {
+  width: 43%;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.brain-img {
+  width:100%;
+}
+
+.left-box-header {
+  color: white;
+  font-size: 50px;
+  margin: 0;
+  font-weight: 100;
+}
+
+.left-box-p {
+  color: white;
+  font-size: 20px;
+  margin:0;
+}
+
+.right-box {
+  width: 45%;
+  padding: 42px;
+  float: right;
+  background-image: url('../assets/other/home-tv-service-bg2.png');
+}
+
+.right-box-wrapper {
+}
+
+.right-box-img {
+}
+
+.right-box-header {
+  font-size: 40px;
+  margin:0;
+  font-weight: 100;
+}
+
+.right-box-p {
+  font-size: 20px;
+  margin:0;
+
+}
+
+.content-section {
+  padding:30px;
+  display: flex;
+}
+
+.content-section-img {
+  margin-left: 255px;
+}
+
+.content-section-wrapper {
+  width: 88%;
+  padding:50px;
+  margin-left: 87px;
+}
+
+.content-section-header {
+  font-size: 50px;
+  width:20%;
+}
+
+.content-section-p {
+  font-size: 20px;
+}
+
+.forth-section {
+  display: flex;
+}
+
+.learn-more-section {
+  display: flex;
+}
