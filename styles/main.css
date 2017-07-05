@@ -31,6 +31,7 @@ a {
   color: #636363
 }
 
+
 .main-nav {
   float: right;
 }
@@ -137,8 +138,6 @@ a {
   font-size: 48px;
 }
 
-
-
 .section-header {
   color: white;
   font-size: 85px;
@@ -215,6 +214,10 @@ a {
   color: rgb(61, 61, 61);
 }
 
+a.active {
+  color:red ;
+}
+
 .main-nav a:focus,
 .main-nav a:hover,
 .top-footer a:hover{
@@ -227,26 +230,15 @@ a {
 }
 
 .top-footer {
-  background-color: #3D3D3D;
+  background-color: #1e2024;
+  padding:50px;
 }
 
-.bottom-footer a {
-  color: #636363 ;
+.top-footer img {
+  float: right;
 }
-
-.bottom-footer a:hover {
-  color: #fff;
-  border-color: #fff;
-}
-
-.bottom-footer {
-  background-color: #151515;
-  color: #636363;
-  padding: 1em 0 .5em;
-}
-
 .main-button-nav {
-  color: #fff
+  color: #fff;
 }
 
 .btn {
@@ -370,4 +362,235 @@ a {
 
 .learn-more-section {
   display: flex;
+  height: 629px;
+  overflow: hidden;
 }
+
+.learn-more-section-h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 60px;
+  width: 60%;
+  bottom: 0;
+  padding-left: 44px;
+  margin-top: 170px;
+}
+
+.learn-more-section-red-box {
+  width: 330px;
+  height:330px;
+  background: #f14848;
+}
+
+.learn-more-section-red-box:hover {
+  cursor: pointer;
+}
+
+.learn-more-wrapper {
+  display: flex;
+  background-color: #f7f7f7;
+
+}
+
+.learn-more-section-wrapper-second {
+  display: flex;
+  background: #eeeeee;
+}
+
+.sched-demo-h {
+  font-size: 65px;
+  margin: 0;
+  width:50%;
+  font-weight:100;
+  margin-top: 10px;
+}
+
+.learn-more-right {
+  background: #f1f1f1;
+  padding:35px;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+.learn-more-right:hover {
+  box-shadow: inset 0px 0px 9px 7px #cecece;
+  transition: box-shadow 0.5s;
+  cursor: pointer;
+}
+
+.learn-more-left {
+}
+
+.fa-big {
+  padding: 22px;
+  font-size: 61px !important;
+  width: 66px;
+  text-align: center;
+  text-decoration: none;
+  margin: 15px 12px;
+  border-radius: 50%;
+
+}
+
+.fa-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 2px 12px 2px #b9b9b9;
+}
+
+.fa-btn {
+  background: #f14848;
+  color: white;
+  transition: all 150ms linear;
+
+}
+
+.social-ul-wrapper {
+
+}
+
+.learn-more-section-social {
+  width: 280px;
+  margin-right: 40px;
+}
+.learn-more-section-social,
+.learn-more-section-social li{
+  display: inline;
+}
+
+.box-text {
+  color: white;
+  padding: 17px;
+  font-size: 23px;
+  /*margin-top: 238px;*/
+}
+
+.arrow-down {
+  border: 3px solid white;
+  color: white;
+  font-weight: 100;
+  margin-left: 28%;
+  margin-top: 19%;
+  padding: 37px;
+}
+
+.blog {
+}
+
+.blog-first {
+  background-color: #f14848;
+}
+
+.blog-first-wrapper {
+  padding:20px;
+}
+
+.blog-first h2 {
+  font-size: 60px;
+  color: white;
+  margin-bottom:0;
+  margin-top: 269px;
+  font-weight: 100;
+}
+.blog-first p{
+  font-size: 25px;
+  color:white
+}
+
+.blog-ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.blog-ul li {
+  display: inline-block;
+  height:530px;
+  width:16.666666666667%;
+  overflow: hidden;
+  float: left
+}
+
+.blog-ul img {
+  height:530px;
+}
+
+.blog-ul figcaption {
+  z-index: 2;
+  color: white;
+font-size: 30px
+}
+
+.blog-ul figure {
+  margin: 0;
+  height: 530px;
+}
+
+.footer-nav {
+  margin: 0;
+  display: flex;
+}
+
+.horizontal-ul {
+  margin: 0;
+}
+.horizontal-ul,.horizontal-ul li{
+  display: inline;
+}
+
+.bottom-footer p,.bottom-footer address {
+  display: inline;
+}
+
+.bottom-footer ul {
+  float: right;
+}
+
+.bottom-footer a {
+  color: #636363;
+  margin-left: 30px;
+}
+
+.bottom-footer a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.bottom-footer {
+  background-color: #151515;
+  color: #636363;
+  padding: 25px 200px;
+  height: 22px;
+  font-size: 18px;
+}
+
+.bottom-footer p {
+  margin-right: 30px
+}
+
+.bottom-footer address {
+  margin-left: 30px;
+}
+
+.fa-btn-footer {
+  font-size: 22px !important;
+  /*border: 1px solid #3c3c3c;*/
+  border-radius: 50%;
+  /*padding: 10px;*/
+}
+
+.footer-nav > li {
+  float: left;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-right: 80px;
+}
+
+.footer-nav > li > ul > li {
+  margin-bottom: 20px;
+}
+
+
+
+
+
