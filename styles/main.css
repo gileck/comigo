@@ -1,8 +1,14 @@
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .main-nav {
     display: none;
   }
+
+  .collapsed-menu {
+    display: block !important;
+  }
 }
+
+
 
 html {
   /*box-sizing: border-box;*/
@@ -50,22 +56,37 @@ a {
 
 /*.solution-nav, .ei-cloud-ul, .ei-middleware-ul, .ii-nav {*/
 .menu-table {
-  width: 0;
+  /*width: 0;*/
   overflow: hidden;
-
   max-height: 0;
   opacity: 0;
-
   background-color: white;
-  position: absolute;
+
+  position: fixed;
+  right:0;
+  left: 0;
+
   display: flex;
   float: left;
-  left: 0;
   padding-left: 0;
   box-shadow: 0px 2px 4px 0px #dcdcdc;
 
-  /*transition: opacity 2s;*/
+  transition: max-height 1s,opacity 1s;
+}
 
+.menu-table li {
+  flex: 1;
+}
+
+.menu-table li > a{
+
+  padding-bottom: 75px;
+  padding-top: 75px;
+  font-size: 55px;
+  cursor: pointer;
+  /*width: 100%;*/
+  display: block;
+  text-align: center;
 }
 
 .ii-nav:hover,
@@ -77,8 +98,8 @@ a {
 {
 
   overflow: visible;
-  width: 100%;
-  max-height: 2500px;
+  /*width: 100%;*/
+  max-height: 1000px;
   opacity: 1;
 
   transition: max-height 2s, opacity 0.5s;
@@ -88,7 +109,7 @@ a {
 .solution-nav:hover,
 .ii-nav-link:hover > .ii-nav,
 .solution-nav-link:hover > .solution-nav {
-  padding-top: 23px;
+  /*padding-top: 23px;*/
 }
 
 .ei-cloud-li:hover > .ei-cloud-ul,
@@ -103,13 +124,7 @@ a {
 .ei-middleware-li:hover > .ei-middleware-ul > li > a,
 .ii-nav-link:hover > .ii-nav > li > a
 {
-  padding-bottom: 75px;
-  padding-top: 75px;
-  font-size: 55px;
-  cursor: pointer;
-  /*width: 100%;*/
-  display: block;
-  text-align: center;
+
 }
 
 a.comigo-whataspp-app {
@@ -118,7 +133,7 @@ a.comigo-whataspp-app {
 .solution-nav:hover > li,
 .ii-nav-link:hover > .ii-nav > li,
 .solution-nav-link:hover > .solution-nav > li {
-  flex: 1;
+
 }
 
 .ei-middleware-li:hover > .ei-middleware-ul > li,
@@ -130,7 +145,6 @@ a.comigo-whataspp-app {
 .solution-nav-link:hover > .solution-nav > li > a,
 .ii-nav-link:hover > .ii-nav > li > a
 {
-  text-align: center;
 
 }
 
@@ -179,7 +193,7 @@ a.active {
 }
 
 .nav-ul > li {
-  padding:0px 15px;
+  padding:0px 1vw;
   font-size: 18px;
   font-weight:200;
   margin-bottom:0;
@@ -198,11 +212,18 @@ a.active {
   color: #fff;
 }
 
+.collapsed-menu {
+  display: none;
+  float: right;
+  margin-right: 21px;
+  font-size: 35px;
+}
+
 /*------------------------------------ FIRST SECTION --------------------------------------------*/
 
 .first-section {
   background-image: url("../assets/other/home-featured-bg.png");
-  height:700px;
+  height:42.5vw;
   background-size: cover;                      /* <------ */
   padding-top: 30px;
 }
@@ -217,8 +238,17 @@ a.active {
   width: 70%;
   margin: auto;
   text-align: center;
-  padding-top: 162px;
+  padding-top: 12vw;
 }
+
+.section-header {
+  color: white;
+  font-size: 5vw;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
 
 /*------------------------------------ WHY COMING --------------------------------------------*/
 
@@ -226,20 +256,11 @@ a.active {
   font-size: 48px;
 }
 
-.section-header {
-  color: white;
-  font-size: 85px;
-  font-weight: 400;
-  margin: 0;
-  letter-spacing: 1px;
-}
-
 .second-section-header {
-  font-size: 70px;
+  font-size: 4vw;
   font-weight: 300;
   margin: 0;
   letter-spacing: 1px;
-
 }
 
 .second-section {
@@ -250,11 +271,12 @@ a.active {
   width: 70%;
   margin: auto;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 5vw;
 }
 
 .second-wrapper p{
-  font-size: 25px;
+  font-size: 1.5vw;
+  /*font-size: 22px;*/
   color: #8e8e8e;
   font-weight: 100;
 }
@@ -271,7 +293,7 @@ a.active {
   transition: all 150ms ease-in-out;
   box-shadow: 0 0 0 rgba(0,0,0,.15);
   cursor: pointer;
-  font-size: 17px;
+  font-size: 1vw;
 }
 
 .btn:hover {
@@ -291,41 +313,50 @@ a.active {
   color: rgb(241, 72, 72);
 }
 
-/*---------------------------------------- 2 BOX SECTION ----------------------------------------*/
+/*---------------------------------------- Third section ----------------------------------------*/
 
 .third-section {
+  display: none;
   height: 672px;
   overflow: hidden;
   background-color: lightgray;
 }
 
+
+/*---------------------------------------- 2 BOX SECTION ----------------------------------------*/
+
+.forth-section {
+  display: flex;
+  height: 45vw;
+}
+
 .left-box {
   width: 44.5%;
-  padding: 46px;
+  padding: 3vw;
   float:left;
   background-image: url('../assets/other/home-tv-service-bg1.png');
 }
 
 .left-box-wrapper {
   width: 43%;
-  margin: auto;
-  margin-top: 80px;
+  margin: 2vw auto auto;
 }
 
 .brain-img {
   width:100%;
+  height: 15vw;
 }
 
 .left-box-header {
   color: white;
-  font-size: 50px;
+  font-size: 3vw;
   margin: 0;
   font-weight: 200;
 }
 
 .left-box-p {
   color: white;
-  font-size: 20px;
+  font-size: 2vw;
   margin:0;
 }
 
@@ -336,22 +367,22 @@ a.active {
   background-image: url('../assets/other/home-tv-service-bg2.png');
 }
 
-.right-box-wrapper {
-}
+.right-box-wrapper {  }
 
 .right-box-img {
+  height: 23vw;
 }
 
 .right-box-header {
-  font-size: 40px;
+  font-size: 3vw;
   margin:0;
   font-weight: 200;
+  width: 80%;
 }
 
 .right-box-p {
-  font-size: 20px;
+  font-size: 2vw;
   margin:0;
-
 }
 
 /*---------------------------------------- YOUR CONTENT + TV IMAGE ----------------------------------------*/
@@ -382,9 +413,6 @@ a.active {
 
 /* ---------------------------------------- LEARN MORE ABOUT COMING ----------------------------------------*/
 
-.forth-section {
-  display: flex;
-}
 
 .learn-more-section {
   display: flex;
@@ -617,14 +645,17 @@ a.active {
 
 .blog-first {
   background-color: #f14848;
+  position: relative;
 }
 
 .blog-first-wrapper {
   padding:20px;
+  position: absolute;
+  bottom: 0;
 }
 
 .blog-first h2 {
-  font-size: 60px;
+  font-size: 4vw;
   color: white;
   margin-bottom:0;
   margin-top: 269px;
@@ -632,7 +663,7 @@ a.active {
 }
 
 .blog-first p{
-  font-size: 25px;
+  font-size: 1.5vw;
   color:white
 }
 
@@ -697,7 +728,7 @@ li.blog-first {
 }
 
 .li-box-wrapper p {
-  font-size: 20px;
+  font-size: 1.5vw;
   color:white;
   background: linear-gradient(transparent, black);
   padding: 21px;
