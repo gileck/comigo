@@ -16,19 +16,26 @@ body {
   overflow-x: hidden;
 }
 
+h1,h2,h3 {
+  font-weight: 300;
+}
+
 header {
   height: 66px;
+  line-height:61px;
   position: fixed;
   background: white;
   width: 100%;
   opacity: 0.985;
   box-shadow: 0px 2px 4px 0px #dcdcdc;
   z-index: 2;
+  font-weight: 400;
 
 }
 
 ul {
-  list-style-type:none
+  list-style-type:none;
+  margin: 0;
 }
 
 a {
@@ -36,16 +43,15 @@ a {
   color: #636363
 }
 
-
+/*---------------------------------------- Top Menu ----------------------------------------*/
 .main-nav {
   float: right;
 }
 
-
 /*.solution-nav, .ei-cloud-ul, .ei-middleware-ul, .ii-nav {*/
 .menu-table {
-  /*width: 0;*/
-  /*overflow: hidden;*/
+  width: 0;
+  overflow: hidden;
 
   max-height: 0;
   opacity: 0;
@@ -107,7 +113,7 @@ a {
 }
 
 a.comigo-whataspp-app {
-  padding: 41px 25px !important;
+  padding: 45px 25px !important;
 }
 .solution-nav:hover > li,
 .ii-nav-link:hover > .ii-nav > li,
@@ -146,6 +152,75 @@ a.comigo-whataspp-app {
   transition: 0.5s;
 }
 
+.header-logo {
+  float: left;
+  padding-top:18px;
+  padding-left: 30px;
+}
+
+a.active {
+  color:red ;
+  font-weight: 400;
+}
+
+.main-nav a:focus,
+.main-nav a:hover,
+.top-footer a:hover{
+  color: red;
+  outline: 0;
+}
+
+.nav-ul {
+  display: flex;
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-bottom:0;
+}
+
+.nav-ul > li {
+  padding:0px 15px;
+  font-size: 18px;
+  font-weight:200;
+  margin-bottom:0;
+
+}
+
+.main-nav a {
+  color: rgb(61, 61, 61);
+}
+
+.main-button-nav:hover {
+  color: white !important;
+}
+
+.main-button-nav {
+  color: #fff;
+}
+
+/*------------------------------------ FIRST SECTION --------------------------------------------*/
+
+.first-section {
+  background-image: url("../assets/other/home-featured-bg.png");
+  height:700px;
+  background-size: cover;                      /* <------ */
+  padding-top: 30px;
+}
+
+.first-section-wrapper {
+  background-image: url("../assets/other/home-brain-image-new-1920x816.png");
+  height:100%;
+  background-size: cover;                      /* <------ */
+}
+
+.header-wrapper {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 162px;
+}
+
+/*------------------------------------ WHY COMING --------------------------------------------*/
 
 .smaller-nav-text {
   font-size: 48px;
@@ -161,7 +236,7 @@ a.comigo-whataspp-app {
 
 .second-section-header {
   font-size: 70px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
   letter-spacing: 1px;
 
@@ -184,86 +259,19 @@ a.comigo-whataspp-app {
   font-weight: 100;
 }
 
-.header-wrapper {
-  width: 70%;
-  margin: auto;
-  text-align: center;
-  padding-top: 162px;
-}
-
-.first-section {
-  background-image: url("../assets/other/home-featured-bg.png");
-  height:700px;
-  background-size: cover;                      /* <------ */
-  padding-top: 30px;
-}
-
-.first-section-wrapper {
-  background-image: url("../assets/other/home-brain-image-new-1920x816.png");
-  height:100%;
-  background-size: cover;                      /* <------ */
-}
-
-.header-logo {
-  float: left;
-  padding-top:18px;
-  padding-left: 30px;
-}
-
-.nav-ul {
-  display: flex;
-  float: right;
-  margin-top: 5px;
-  margin-right: 20px;
-}
-
-.nav-ul > li {
-  padding:15px;
-  font-size: 18px;
-  font-weight:200;
-}
-
-.main-nav a {
-  color: rgb(61, 61, 61);
-}
-
-a.active {
-  color:red ;
-}
-
-.main-nav a:focus,
-.main-nav a:hover,
-.top-footer a:hover{
-  color: red;
-  outline: 0;
-}
-
-.main-button-nav:hover {
-  color: white !important;
-}
-
-.top-footer {
-  background-color: #1e2024;
-  padding:50px;
-}
-
-.top-footer img {
-  float: right;
-}
-.main-button-nav {
-  color: #fff;
-}
+/*---------------------------------------- Buttons ----------------------------------------*/
 
 .btn {
   display: inline-block;
   letter-spacing: 3px;
-  padding: 1.2em 2em;
+  padding: 1em 2em;
   border-radius: 1.7em;
   margin: 2em auto;
   text-transform: uppercase;
   transition: all 150ms ease-in-out;
   box-shadow: 0 0 0 rgba(0,0,0,.15);
   cursor: pointer;
+  font-size: 17px;
 }
 
 .btn:hover {
@@ -283,6 +291,8 @@ a.active {
   color: rgb(241, 72, 72);
 }
 
+/*---------------------------------------- 2 BOX SECTION ----------------------------------------*/
+
 .third-section {
   height: 672px;
   overflow: hidden;
@@ -295,7 +305,6 @@ a.active {
   float:left;
   background-image: url('../assets/other/home-tv-service-bg1.png');
 }
-
 
 .left-box-wrapper {
   width: 43%;
@@ -311,7 +320,7 @@ a.active {
   color: white;
   font-size: 50px;
   margin: 0;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .left-box-p {
@@ -336,7 +345,7 @@ a.active {
 .right-box-header {
   font-size: 40px;
   margin:0;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .right-box-p {
@@ -344,6 +353,8 @@ a.active {
   margin:0;
 
 }
+
+/*---------------------------------------- YOUR CONTENT + TV IMAGE ----------------------------------------*/
 
 .content-section {
   padding:30px;
@@ -369,29 +380,29 @@ a.active {
   font-size: 20px;
 }
 
+/* ---------------------------------------- LEARN MORE ABOUT COMING ----------------------------------------*/
+
 .forth-section {
   display: flex;
 }
 
 .learn-more-section {
   display: flex;
-  height: 629px;
+  height: 655px;
   overflow: hidden;
 }
 
 .learn-more-section-h3 {
-  padding: 0;
-  margin: 0;
-  font-size: 60px;
+  font-size: 75px;
   width: 60%;
-  bottom: 0;
-  padding-left: 44px;
-  margin-top: 170px;
+  padding: 0 0 0 44px;
+  margin-top: 141px;
+  margin-bottom: 19px;
 }
 
 .learn-more-section-red-box {
-  width: 330px;
-  height:330px;
+  width: 348px;
+  height:348px;
   background: #f14848;
 }
 
@@ -411,11 +422,12 @@ a.active {
 }
 
 .sched-demo-h {
-  font-size: 65px;
+  font-size: 74px;
   margin: 0;
-  width:50%;
-  font-weight:100;
+  width: 70%;
+  font-weight: 300;
   margin-top: 10px;
+  letter-spacing: 2px;
 }
 
 .learn-more-right {
@@ -433,6 +445,50 @@ a.active {
 
 .learn-more-left {
 }
+
+.social-ul-wrapper {
+
+}
+
+.learn-more-section-social {
+  width: 280px;
+  margin-right: 40px;
+}
+
+.learn-more-section-social,
+.learn-more-section-social li{
+  display: inline;
+}
+
+.learn-more-section-social {
+  margin-bottom: 15px;
+  padding-top: 22px;
+
+}
+
+.box-text {
+  color: white;
+  padding: 17px;
+  font-size: 23px;
+  /*margin-top: 238px;*/
+}
+
+.arrow-down {
+  border: 3px solid white;
+  color: white;
+  font-weight: 100;
+  margin-left: 28%;
+  margin-top: 19%;
+  padding: 37px;
+}
+
+.arrow-sign-wrapper {
+  text-align: center;
+  margin-top: 91px;
+}
+
+/* ---------------------------------------- fa icons ---------------------------------------- */
+
 
 .fa-big {
   padding: 22px;
@@ -457,75 +513,15 @@ a.active {
 
 }
 
-.social-ul-wrapper {
+/* ---------------------------------------- Footer ---------------------------------------- */
 
-}
-
-.learn-more-section-social {
-  width: 280px;
-  margin-right: 40px;
-}
-.learn-more-section-social,
-.learn-more-section-social li{
-  display: inline;
+.top-footer {
+  background-color: #1e2024;
+  padding:50px;
 }
 
-.box-text {
-  color: white;
-  padding: 17px;
-  font-size: 23px;
-  /*margin-top: 238px;*/
-}
-
-.arrow-down {
-  border: 3px solid white;
-  color: white;
-  font-weight: 100;
-  margin-left: 28%;
-  margin-top: 19%;
-  padding: 37px;
-}
-
-.blog {
-}
-
-.blog-first {
-  background-color: #f14848;
-}
-
-.blog-first-wrapper {
-  padding:20px;
-}
-
-.blog-first h2 {
-  font-size: 60px;
-  color: white;
-  margin-bottom:0;
-  margin-top: 269px;
-  font-weight: 100;
-}
-.blog-first p{
-  font-size: 25px;
-  color:white
-}
-
-.blog-ul {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.blog-ul li {
-  display: inline-block;
-  height:530px;
-  width:16.666666666667%;
-  overflow: hidden;
-  float: left
-}
-
-.blog-ul img {
-  height:530px;
+.top-footer img {
+  float: right;
 }
 
 .footer-nav {
@@ -592,6 +588,8 @@ a.active {
   margin-bottom: 20px;
 }
 
+/* ---------------------------------------- BLOG ---------------------------------------- */
+
 .blog {
   background-color: black;
 
@@ -614,12 +612,56 @@ a.active {
   transition: opacity 0.5s;
 }
 
+.blog {
+}
+
+.blog-first {
+  background-color: #f14848;
+}
+
+.blog-first-wrapper {
+  padding:20px;
+}
+
+.blog-first h2 {
+  font-size: 60px;
+  color: white;
+  margin-bottom:0;
+  margin-top: 269px;
+  font-weight: 100;
+}
+
+.blog-first p{
+  font-size: 25px;
+  color:white
+}
+
+.blog-ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.blog-ul li {
+  display: inline-block;
+  height:36.1111111833vw;
+  width:16.666666666667%;
+  overflow: hidden;
+  float: left
+}
+
+.blog-ul img {
+  height:530px;
+}
+
 li.blog-first {
   opacity: 1;
 }
 
 .blog-second a {
   background: url("../assets/blog/ibc_post_EI-750x508.png") no-repeat center;
+  background-position-y: 0px;
 }
 
 .blog-third a {
@@ -636,6 +678,10 @@ li.blog-first {
 
 .blog-six a {
   background: url("../assets/blog/post_quality-750x508.jpeg") no-repeat center;
+}
+
+.blog-ul a {
+  background-position: top;
 }
 
 .blog-li div {
@@ -677,9 +723,12 @@ li:hover .read-more {
   display: inline-block;
 }
 
+/* --------------------------------------------------------------------------------  */
+
 .first-video {
   position: absolute;
   width: 100%;
   height: 500px;
   float: left;
 }
+
